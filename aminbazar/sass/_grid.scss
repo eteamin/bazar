@@ -1,0 +1,14 @@
+@import "../../contrib/sass/gridle/gridle";
+
+// setting up the grid
+@include gridle_setup( (
+	context : 24,
+	gutter-width : 16px,
+	direction : rtl,
+	//ie7-support : true
+) );
+
+
+@include gridle_register_default_mobile_first_states();
+@include gridle_generate_classes();
+

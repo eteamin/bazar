@@ -1,0 +1,59 @@
+# -*- coding: utf-8 -*-
+
+from sqlalchemy import Column, ForeignKey
+from sqlalchemy.orm import relationship, backref
+from sqlalchemy.types import Integer, Unicode
+from twa.model.mixines import OrderableMixin, AuthoredMixin
+from twa.model import DeclarativeBase
+from tgtoolbox.model.attachment import AttachmentCleanerMixin, Attachment, AttachedImage, GoldenRatioAttachedImage
+__author__ = 'vahid'
+
+
+class ImageCategory(OrderableMixin, AttachmentCleanerMixin, AuthoredMixin, DeclarativeBase):
+    __tablename__ = 'image_category'
+
+    #{ Columns
+
+    id = Column(Integer, primary_key=True)
+    title = Column(Unicode(255), nullable=False)
+    image = Column(Attachment(AttachedImage), nullable=False)
+
+    #}
+
+ImageCategory.register_events()
+
+
+class ImageAlbum(OrderableMixin, AttachmentCleanerMixin, AuthoredMixin, DeclarativeBase):
+    __tablename__ = 'image_album'
+
+    #{ Columns
+
+    id = Column(Integer, primary_key=True)
+    title = Column(Unicode(255), nullable=False)
+    image = Column(Attachment(AttachedImage), nullable=False)
+    category_id = Column(Integer, ForeignKey(
+        'image_category.id', onupdate='CASCADE', ondelete='CASCADE'), nullable=False)
+    category = relationship('ImageCategory', backref=backref('albums', order_by='ImageAlbum.order'))
+    #}
+
+ImageAlbum.register_events()
+
+
+class GalleryThumbnail(GoldenRatioAttachedImage):
+    width = 230
+
+
+class Image(OrderableMixin, AttachmentCleanerMixin, AuthoredMixin, DeclarativeBase):
+    __tablename__ = 'image'
+
+    #{ Columns
+
+    id = Column(Integer, primary_key=True)
+    title = Column(Unicode(255), nullable=True)
+    image = Column(Attachment(GalleryThumbnail), nullable=False)
+    album_id = Column(Integer, ForeignKey(
+        'image_album.id', onupdate='CASCADE', ondelete='CASCADE'), nullable=False)
+    album = relationship('ImageAlbum', backref=backref('images', order_by='Image.order'))
+    #}
+
+Image.register_events()

@@ -1,0 +1,105 @@
+
+
+context_sources: !context
+  path: !import os.path
+  public: !template ${manifest_dir}/aminbazar/public
+  public_contrib: !template ${manifest_dir}/aminbazar/public/contrib
+  contrib: !template ${manifest_dir}/contrib/static
+  sass: !template ${manifest_dir}/aminbazar/sass
+  js: !template ${manifest_dir}/aminbazar/javascript
+  temp: /tmp
+
+context_public: !context
+  out_css: !template ${public}/css
+  out_js: !template ${public}/js
+
+public_css: !watch
+  priority: 10
+  banner: "\nBuilding public css:"
+  sass: !options
+    input: !template ${sass}/aminbazar.sass
+    output: !template ${temp}/aminbazar.css
+  inputs:
+    - !template ${contrib}/lightslider/lightslider.css
+    - !eval public_css.sass.output
+
+  output: !template ${public}/css/public.css
+  minified_output: !template ${public}/css/public.min.css
+
+  actions:
+
+    - !subprocess
+      cwd: !eval manifest_dir
+      echo: true
+      shell: true
+      arguments: !template sass ${public_css.sass.input} > ${public_css.sass.output}
+
+    - !subprocess
+      cwd: !eval manifest_dir
+      echo: true
+      shell: true
+      arguments: !template cat ${' '.join(public_css.inputs)} > ${public_css.output}
+
+    - !subprocess
+      echo: true
+      shell: true
+      arguments: !template yui-compressor --type css ${public_css.output} > ${public_css.minified_output}
+
+    - !banner
+      text: "done. \n"
+
+  watcher: !watcher
+    recursive: true
+    predicate: !eval "lambda fn: fn.endswith('.sass') or fn.endswith('.scss')"
+    sources:
+      - !eval sass
+
+public_js: !watch
+  priority: 20
+  banner: "\nBuilding public javascripts:"
+
+  inputs:
+
+    - !template ${public_contrib}/jquery-1.11.2.js
+    - !template ${public_contrib}/modernizr-2.7.1.js
+    - !template ${contrib}/lightslider/lightslider.js
+    - !template ${contrib}/prayertimes.js
+    - !template ${contrib}/joop-1.3.min.js
+    - !template ${contrib}/snap.svg-min.js
+    - !template ${contrib}/news-ticker/jquery.ticker.js
+
+
+    - !template ${js}/head.js
+    - !template ${js}/image.js
+    - !template ${js}/logo.js
+    - !template ${js}/logotype.js
+    - !template ${js}/tail.js
+
+  output: !template ${out_js}/public.js
+  minified_output: !template ${out_js}/public.min.js
+
+  actions:
+
+    - !subprocess
+      banner: !template |
+        Concatentating:
+          ${'\n  '.join(public_js.inputs)}
+        Into ${public_js.output}
+      echo: false
+      shell: true
+      arguments: !template cat ${' '.join(public_js.inputs)} > ${public_js.output}
+
+    - !subprocess
+      echo: true
+      shell: true
+      arguments: !template yui-compressor --type js ${public_js.output} > ${public_js.minified_output}
+
+    - !banner
+      text: "done. \n"
+
+  watcher: !watcher
+    recursive: true
+    predicate: !eval "lambda fn: fn.endswith('.js')"
+    sources:
+      - !eval contrib
+      - !eval js

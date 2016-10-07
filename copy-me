@@ -1,0 +1,55 @@
+#! /bin/bash
+# VERSION = 0.1.1
+
+function help {
+	echo "Usage: copy-me DST_DIR DST_NAME"
+	exit 1
+}
+
+
+if [ -z "$1" ]
+  then
+    echo "No Destination dir supplied"
+	help
+fi
+
+if [ -z "$2" ]
+  then
+    echo "No Destination name supplied"
+	help
+fi
+
+SRC=$(readlink -f .)
+TMP=/tmp/copy-me-tg
+DST=$(readlink -f $1)
+SRC_NAME=$(grep 'beaker.session.key' $SRC/development.ini | sed 's/.*beaker.session.key\s*=\s*//')
+DST_NAME=$2
+
+if [ -d "$TMP" ]; then
+  rm -rf $TMP
+fi
+mkdir $TMP
+
+cp -r . $TMP;
+cp $SRC/.gitignore $TMP/.gitignore
+rm -rf $TMP/data/*;
+rm -rf $TMP/$DST_NAME/i18n/*;
+rm -rf $TMP/.idea
+rm -rf $TMP/.sass-cache
+rm -rf $TMP/.git
+sync
+find $TMP -ignore_readdir_race -readable -type f -exec sed -i "s/$SRC_NAME/$DST_NAME/g" {} \;
+sync
+find $TMP -ignore_readdir_race -readable -iname "*$SRC_NAME*" -exec rename "s/$SRC_NAME/$DST_NAME/g" {} \;
+sync
+if [ ! -d "$DST" ]; then
+  mkdir -p $DST
+fi
+mv $TMP/.gitignore $DST/.gitignore
+
+find $TMP -ignore_readdir_race -readable -name ".*" -exec rm -rf {} \;
+sync
+
+
+mv $TMP/* $DST
+find $DST -ignore_readdir_race -readable -name "*$SRC_NAME*" -exec rename "s/$SRC_NAME/$DST_NAME/g" {} \;

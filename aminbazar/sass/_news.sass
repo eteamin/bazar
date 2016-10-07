@@ -1,0 +1,81 @@
+.invite-box
+  article
+    border-bottom: 1px solid $header-bg
+    &:last-child
+      border-bottom: none !important
+    >div:first-child
+      margin-right: -$gutter
+    img
+      width: 100%
+    p
+      margin-top: 0
+      text-align: justify
+      clear: both
+      min-height: 40px
+    .date
+      font-size: .9em
+
+.news-box
+  @extend .invite-box
+
+
+.news-list
+  margin-top: $gutter * 3
+  article
+    overflow: hidden
+  figure
+    margin: 0
+    padding: 0
+  img
+    width: 100%
+  >hr:last-child
+    display: none
+
+.news-view
+  >h3
+    margin-top: 20px
+    width: 100%
+    float: right
+    clear: both
+  >div.time
+    float: left
+  >.description
+    +gridle(24)
+    float: right
+    background-color: lighten($nav-bg, 30%)
+    padding-top: 16px
+    padding-bottom: 16px
+    border: 1px solid $header-bg
+    margin-top: $gutter
+  >div.news-contents
+    width: 100%
+    float: right
+    font-size: 1.1em
+    line-height: 1.9em
+    >img
+      margin: $gutter $gutter $gutter 0
+      padding: 0
+      width: 380px
+      float: left
+    >p
+      text-align: justify !important
+
+#newsRibbon
+  +gridle(24)
+  height: 34px
+  border: 1px solid $header-bg
+  margin-bottom: $gutter
+  padding-right: 0
+  >h3:first-child
+    +gridle(2)
+    line-height: normal !important
+    height: 100%
+    background: $header-bg
+    font-family: $header-font
+    font-size: 1.5em
+    color: $header-color
+    padding-right: $gutter*2
+    margin: 0
+
+
+

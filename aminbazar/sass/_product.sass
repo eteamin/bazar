@@ -1,0 +1,91 @@
+
+$product-title-width: 20%
+
+.product-thumbnails
+  +gridle(24)
+  ul
+    display: block
+    float: $float
+    width: 100%
+    margin: 0
+    padding: 0
+    border: 1px
+    overflow: hidden
+
+    li
+      display: block
+      width: 33.333333333%
+      height: 250px
+      float: $float
+      overflow: hidden
+
+.product_image
+  a
+    display: block
+    margin: 1.5%
+    width: 97%
+    height: 97%
+    overflow: hidden
+    position: relative
+
+    img
+      +border-radius(5px)
+      display: block
+      width: 100%
+      height: 150px
+
+.product_attributes
+  p
+    display: block
+    position: relative
+    padding: 2px
+    margin: 0
+    height: 0
+    font-size: 16px
+    font-family: $font-family
+    color: #0c0c0c
+    text-align: right
+
+.product_quantity
+  @extend .product_attributes
+  p
+    padding: 5px
+    margin-right: 3px
+    margin-top: 25px
+    color: #2c83af
+
+.product_price
+  @extend .product_attributes
+  p
+    padding: 5px
+    margin-top: 10px
+    color: #4CAF58
+
+.product_details
+  @extend .product_attributes
+
+
+.product-content-area
+  +gridle(15)
+  padding-top: $gutter
+  border: 1px solid $header-bg
+  img
+    height: 450px
+    width: 100%
+    border-radius: 5px
+
+.product-grid-view
+  display: inline-flex
+  font-size: 16px
+  width: 100%
+  background-color: ghostwhite
+  div
+    padding-left: 100px
+    div
+      padding-top: 10px
+      border-radius: 5px
+      background-color: rgba(112, 208, 80, 0.24)
+      p
+        margin-top: 3px
+        margin-right: 5px
+        padding-bottom: 14px

@@ -1,0 +1,59 @@
+
+@mixin box
+  border: 1px solid $box-border-color
+  float: $float
+  width: 100%
+  margin-bottom: $gutter
+  box-sizing: border-box
+  padding: $gutter $gutter 0 $gutter
+  >div
+    width: 100%
+    float: $float
+  header
+    background-color: $box-header-bg
+    min-height: 20px
+    color: $box-header-color
+    float: $float
+    width: 100%
+    box-sizing: border-box
+    padding: 0 $gutter 0 $gutter
+    position: relative
+    h3
+      font-family: $header-font
+      font-size: 1.5em
+      margin: $gutter/2 0 0 0
+      line-height: normal !important
+    a
+      position: absolute
+      font-size: .94em
+      color: $box-header-color
+      bottom: $gutter / 2
+      left: $gutter / 2
+
+  article
+    float: $float
+    margin-top: $gutter
+    padding-bottom: $gutter
+    width: 100%
+    h4
+      margin-top: 0
+      clear: both
+    p
+      text-align: justify
+      margin: 0
+      padding: 4px
+  hr
+    width: 100%
+    &:last-child
+      display: none
+  .box-content
+    margin: $gutter
+
+  a.more
+    color: $box-header-bg
+
+  img
+    max-width: 100%
+
+.box
+  +box

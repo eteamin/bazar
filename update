@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git pull
+chown -R www-data:www-data .
+#alembic -c production.ini upgrade head
+service apache2 reload

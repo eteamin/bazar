@@ -1,0 +1,313 @@
+# Persian translations for twa.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the twa project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: twa 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-09-16 19:47+0430\n"
+"PO-Revision-Date: 2015-09-16 19:47+0430\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: fa <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.0\n"
+
+#: twa/controllers/root.py:91
+msgid "Wrong credentials"
+msgstr ""
+
+#: twa/controllers/root.py:107
+#, python-format
+msgid "Welcome back, %s!"
+msgstr ""
+
+#: twa/controllers/root.py:120
+msgid "We hope to see you soon!"
+msgstr ""
+
+#: twa/forms/contact.py:11 twa/forms/education.py:12
+#: twa/forms/family_advice.py:11 twa/forms/question.py:22
+#: twa/forms/servant.py:11 twa/forms/wonder.py:13
+msgid "Fullname"
+msgstr ""
+
+#: twa/forms/contact.py:12
+msgid "Organization"
+msgstr ""
+
+#: twa/forms/contact.py:13 twa/forms/education.py:21
+#: twa/forms/family_advice.py:18 twa/forms/question.py:26
+#: twa/forms/servant.py:24 twa/forms/wonder.py:17
+msgid "Email Address"
+msgstr ""
+
+#: twa/forms/contact.py:14 twa/forms/education.py:22
+#: twa/forms/family_advice.py:16 twa/forms/question.py:24
+#: twa/forms/servant.py:25 twa/forms/wonder.py:15
+msgid "Cellphone"
+msgstr ""
+
+#: twa/forms/contact.py:15 twa/forms/education.py:23
+#: twa/forms/family_advice.py:17 twa/forms/question.py:25
+#: twa/forms/servant.py:26 twa/forms/wonder.py:16
+msgid "Phone"
+msgstr ""
+
+#: twa/forms/contact.py:16 twa/forms/family_advice.py:19
+#: twa/forms/question.py:23 twa/forms/wonder.py:14
+msgid "Subject"
+msgstr ""
+
+#: twa/forms/contact.py:17 twa/forms/family_advice.py:20
+#: twa/forms/question.py:28 twa/forms/wonder.py:19
+msgid "Description"
+msgstr ""
+
+#: twa/forms/contact.py:19 twa/forms/education.py:27
+#: twa/forms/family_advice.py:23 twa/forms/question.py:30
+#: twa/forms/servant.py:30 twa/forms/wonder.py:21
+msgid "Submit"
+msgstr ""
+
+#: twa/forms/education.py:11
+msgid "Education course"
+msgstr ""
+
+#: twa/forms/education.py:11
+msgid "[Please Select]"
+msgstr ""
+
+#: twa/forms/education.py:13 twa/forms/servant.py:12
+msgid "Fathername"
+msgstr ""
+
+#: twa/forms/education.py:14 twa/forms/family_advice.py:13
+#: twa/forms/servant.py:13
+msgid "Sexuality"
+msgstr ""
+
+#: twa/forms/education.py:14 twa/forms/family_advice.py:13
+#: twa/forms/servant.py:13
+msgid "Male"
+msgstr ""
+
+#: twa/forms/education.py:14 twa/forms/family_advice.py:13
+#: twa/forms/servant.py:13
+msgid "Female"
+msgstr ""
+
+#: twa/forms/education.py:15 twa/forms/family_advice.py:12
+#: twa/forms/servant.py:15
+msgid "Birth Date"
+msgstr ""
+
+#: twa/forms/education.py:16 twa/forms/servant.py:16
+msgid "Id Number"
+msgstr ""
+
+#: twa/forms/education.py:17 twa/forms/servant.py:17
+msgid "National Id"
+msgstr ""
+
+#: twa/forms/education.py:18 twa/forms/family_advice.py:15
+#: twa/forms/servant.py:18
+msgid "Education Licence"
+msgstr ""
+
+#: twa/forms/education.py:19 twa/forms/servant.py:21
+msgid "Job"
+msgstr ""
+
+#: twa/forms/education.py:20
+msgid "Address"
+msgstr ""
+
+#: twa/forms/education.py:24 twa/forms/servant.py:27
+msgid "Comment"
+msgstr ""
+
+#: twa/forms/family_advice.py:14
+msgid "Marital Status"
+msgstr ""
+
+#: twa/forms/question.py:27 twa/forms/wonder.py:18
+msgid "Private"
+msgstr ""
+
+#: twa/forms/servant.py:14
+msgid "RegistrationCity"
+msgstr ""
+
+#: twa/forms/servant.py:19
+msgid "Education Licence Year"
+msgstr ""
+
+#: twa/forms/servant.py:20
+msgid "Education Licence City"
+msgstr ""
+
+#: twa/forms/servant.py:22 twa/forms/servant.py:23
+msgid "Work Address"
+msgstr ""
+
+#: twa/forms/validation.py:13
+msgid "Must be a valid email address"
+msgstr ""
+
+#: twa/forms/validation.py:14 twa/forms/validation.py:25
+msgid "Enter a value"
+msgstr ""
+
+#: twa/forms/validation.py:22
+msgid "Must be at least $min characters"
+msgstr ""
+
+#: twa/forms/validation.py:24
+msgid "Cannot be longer than $max characters"
+msgstr ""
+
+#: twa/lib/widgets/recaptcha.py:22
+msgid "Incorrect value."
+msgstr ""
+
+#: twa/lib/widgets/recaptcha.py:23
+msgid "Missing value."
+msgstr ""
+
+#: twa/templates/incompatible.mak:64
+#, python-format
+msgid "You are using an old version of the %s browser (v.%s)"
+msgstr ""
+
+#: twa/templates/incompatible.mak:66
+#, python-format
+msgid "This browser and the older versions of it are not supported by %s"
+msgstr ""
+
+#: twa/templates/incompatible.mak:68
+msgid "To be able to see this website please use one these browsers:"
+msgstr ""
+
+#: twa/templates/news/index.mak:3
+msgid "News Archive Index"
+msgstr ""
+
+#: twa/templates/news/list.mak:3
+#, python-format
+msgid "News Archive for: %s"
+msgstr ""
+
+#: twa/templates/news/list.mak:19
+#: twa/templates/news/partial/news_box.mak:14
+#: twa/templates/invitation/list.mak:19
+#: twa/templates/invitation/partial/invite_box.mak:18
+msgid "More..."
+msgstr ""
+
+#: twa/templates/news/partial/news_box.mak:4
+msgid "News"
+msgstr ""
+
+#: twa/templates/news/partial/news_box.mak:5
+#: twa/templates/invitation/partial/invite_box.mak:4
+msgid "archive"
+msgstr ""
+
+#: twa/templates/contact/index.mak:3 twa/templates/partial/footer.mak:5
+msgid "Management Contact"
+msgstr ""
+
+#: twa/templates/contact/success.mak:3
+msgid "Your contact request has been sent successfully."
+msgstr ""
+
+#: twa/templates/education/index.mak:3
+msgid "Education registration form"
+msgstr ""
+
+#: twa/templates/education/success.mak:3
+msgid "Your Education registration form has been sent successfully."
+msgstr ""
+
+#: twa/templates/family_advice/index.mak:3
+msgid "Family advice form"
+msgstr ""
+
+#: twa/templates/family_advice/success.mak:3
+msgid "Your request has been registered successfully."
+msgstr ""
+
+#: twa/templates/invitation/index.mak:3
+msgid "Invitation Archive Index"
+msgstr ""
+
+#: twa/templates/invitation/list.mak:3
+#, python-format
+msgid "Invitation Archive for: %s"
+msgstr ""
+
+#: twa/templates/invitation/partial/invite_box.mak:3
+msgid "Invitations"
+msgstr ""
+
+#: twa/templates/partial/footer.mak:6
+msgid "Servant Request"
+msgstr ""
+
+#: twa/templates/partial/footer.mak:7
+msgid "Education Registration"
+msgstr ""
+
+#: twa/templates/partial/footer.mak:8
+msgid "Wonder stories"
+msgstr ""
+
+#: twa/templates/partial/footer.mak:9
+msgid "Question"
+msgstr ""
+
+#: twa/templates/partial/footer.mak:10
+msgid "Family Advice"
+msgstr ""
+
+#: twa/templates/partial/header.mak:6
+msgid "website"
+msgstr ""
+
+#: twa/templates/partial/header.mak:7
+msgid "Website Title"
+msgstr ""
+
+#: twa/templates/partial/pray_times_box.mak:4
+msgid "Pray Times"
+msgstr ""
+
+#: twa/templates/question/index.mak:3
+msgid "Religious Question form"
+msgstr ""
+
+#: twa/templates/question/success.mak:3
+msgid "Your question has been sent successfully."
+msgstr ""
+
+#: twa/templates/servant/index.mak:3
+msgid "Servant registration form"
+msgstr ""
+
+#: twa/templates/servant/success.mak:3
+msgid "Your servant request has been sent successfully."
+msgstr ""
+
+#: twa/templates/wonder/index.mak:3
+msgid "Wonder form"
+msgstr ""
+
+#: twa/templates/wonder/success.mak:3
+msgid "Your wonder story has been registered successfully."
+msgstr ""
+
