@@ -46,7 +46,7 @@ install_requires = [
     "repoze.who",
     "tw2.forms",
     "tgext.admin >= 0.6.1",
-    "tw2.tinymce",
+#    "tw2.tinymce",
     "tw2.recaptcha",
     "maryjane>=2.16",
     "psycopg2",
@@ -54,7 +54,7 @@ install_requires = [
     "webhelpers",
     "user-agents",
     # "tw2.bootstrap.forms>=2.2.4",
-    "tgtoolbox>=0.16",
+ #   "tgtoolbox>=0.16",
     "requests"
 ]
 
