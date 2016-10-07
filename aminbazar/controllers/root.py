@@ -46,13 +46,6 @@ class RootController(BaseController):
         """Handle the front-page."""
         abort(404)
 
-    @expose('xml', content_type="application/xml")
-    def sitemap(self):
-        pages = DBSession.query(model.Menu)\
-            .filter(or_(model.Menu.address != None, model.Menu.content != None)).all()
-        return render(dict(pages=pages, domain=tg_config.get('domain.name')),
-                      template_name='aminbazar.templates.sitemap')
-
     @expose('aminbazar.templates.login')
     def login(self, came_from=lurl('/'), failure=None, login=''):
         """Start the user login."""
