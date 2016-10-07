@@ -2,7 +2,6 @@
 
 from tw2.forms import TextField, TextArea, NumberField, SingleSelectField
 from aminbazar.model import ParentMenu, SubMenu, DBSession, Menu
-from aminbazar.lib.widgets import TinyMCEelFinderWidget
 from .smart import SmartEasyCrudRestController
 from tg import expose
 from datetime import datetime
@@ -35,7 +34,6 @@ class MenuAdminController(SmartEasyCrudRestController):
                                    'keywords': TextField,
                                    'order': NumberField,
                                    'description': TextArea,
-                                   'content': TinyMCEelFinderWidget,
                                    'parent': ParentField
                                },
 
