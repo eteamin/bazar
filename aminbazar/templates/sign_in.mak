@@ -2,18 +2,18 @@
 <%def name="title()">Login Form</%def>
 
 <div class="centralized">
-  <div class="col-md-8 col-md-offset-1" style="position: relative; left: -50%;">
+  <div class="col-md-8 col-md-offset-1">
     <form action="${tg.url('/account/login')}"
           method="post" accept-charset="UTF-8" class="login">
 
       <div class="form-group">
         <label class="col-sm-10 control-label">نام کاربری:</label>
-          <input class="form-control" type="text" name="user_name"/>
+          <input class="form-control" type="text" name="user_name" style="width: 302px;"/>
       </div>
 
       <div class="form-group">
         <label class="col-sm-2 control-label">رمز عبور:</label>
-          <input class="form-control" type="password" name="password"/>
+          <input class="form-control" type="password" name="password" style="width: 302px;"/>
       </div>
 
       <div class="form-group">

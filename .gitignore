@@ -93,6 +93,8 @@ ENV/
 
 # gearbox
 production.ini
+production.ini~
+development.ini~
 development.ini
 
 # Project Spefici
