@@ -1,6 +1,6 @@
 <%inherit file="local:templates.master" />
 <div class="centralized">
-  <div class="col-md-8 col-md-offset-1" style="position: relative; left: -50%;">
+  <div class="col-md-8 col-md-offset-1">
     <form action="${tg.url('/products/submit_product')}"
           method="post" accept-charset="UTF-8" class="login" enctype="multipart/form-data">
 
