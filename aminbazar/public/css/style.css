@@ -17,7 +17,7 @@ a{text-decoration:none;}
 .txt-lt{text-align:left;}/* text align left */
 .txt-center{text-align:center;}/* text align center */
 .float-rt{float:right;}/* float right */
-.float-lt{float:left;}/* float left */
+.float-lt{float:right;}/* float left */
 .clear{clear:both;}/* clear float */
 .pos-relative{position:relative;}/* Position Relative */
 .pos-absolute{position:absolute;}/* Position Absolute */
@@ -53,7 +53,7 @@ body {
 	padding-bottom:25px;
 }
 .logo {
-	float: left;
+	float: right;
 }
 .header_top_right{
 	float:right;
@@ -165,7 +165,7 @@ body {
     position: relative;
 }
 .nav > li {
-    float: left;
+    float: right;
 }
 .nav > li:first-child,.nav > li:last-child {
 	background-image:none;
@@ -218,7 +218,7 @@ body {
         background-position: 95% 50%;
     }
     .nav li li .parent {
-        background-image: url("images/downArrow.png");
+        background-image: url("public/img/downArrow.png");
         background-repeat: no-repeat;
         background-position: 95% 50%;
     }
@@ -242,7 +242,7 @@ body {
 	padding:6%  0 2%;
 }
 .slider-text{
-	float:left;
+	float:right;
 	width:50%;
 }
 .slider-text h2{
@@ -357,7 +357,7 @@ body {
             white-space: nowrap;
  }
 .ocarousel_window_slides * {
-            float: left;
+            float: right;
             white-space: normal;
 }
 .ocarousel_window_slides a{
@@ -382,12 +382,12 @@ body {
 	padding-top:2em;
 }
 .content-bottom-left{
-	float:left;
+	float:right;
 	width: 20%;
 	padding-right:2%;
 } 
 .content-bottom-right{
-	float:left;
+	float:right;
 	width:75.8%;
 	padding-left:2%;
 	border-left:1px solid #D7D7D7;
@@ -458,7 +458,7 @@ body {
 	margin-top:25px;
 }
 .add-banner img{
-	float:left;
+	float:right;
 }
 .banner-desc{
 	float:right;
@@ -634,7 +634,7 @@ body {
 	text-decoration:underline;
 }
 .copy_right {
-	float:left;
+	float:right;
 }
 .copy_right p {
 	font-size:14px;
@@ -715,12 +715,12 @@ body {
 }
 .cont-desc {
 	display: block;
-	float: left;
+	float: right;
 	clear: both;
 }
 .rightsidebar {
 	display: block;
-	float: left;
+	float: right;
 	margin: 0% 0 0% 1.6%;
 }
 .cont-desc:first-child {
@@ -728,7 +728,7 @@ body {
 }
 .desc {
 	display: block;
-	float: left;
+	float: right;
 	margin: 0% 0 0% 2.6%;
 }
 .span_1_of_2 {
@@ -737,7 +737,7 @@ body {
 }
 .images_3_of_2 {
 	width:36.2%;
-	float: left;
+	float: right;
 	text-align: center;
 }
 .span_3_of_2 {
@@ -775,7 +775,7 @@ body {
 .price p span {
 	font-size:2em;
 	color:#e44f2b;
-	font-family:'Ubuntu Condensed', sans-serif;
+	font-family:inherit;
 }
 .available {
 	padding: 10px 0;
@@ -796,7 +796,7 @@ body {
 	margin-bottom:15px;
 }
 .share{
-	float:left;
+	float:right;
 }
 .share p {
 	padding-top: 10px;
@@ -894,7 +894,7 @@ body {
 	padding-bottom:15px;
 }
 .color-types{
-	float:left;
+	float:right;
 }
 .social-share{
 	float:right;
@@ -999,7 +999,7 @@ body {
 		border-top:none;
 }
 .product-specifications li span{
-	float:left;
+	float:right;
 	width:47%;
 	padding:10px;
 	color:#23272a;
@@ -1095,7 +1095,7 @@ body {
 	padding:5px 0;
 	color: #969696;
 	line-height: 1.6em;
-	font-family: verdana, arial, helvetica, helve, sans-serif;
+	/*font-family*/: verdana, arial, helvetica, helve, sans-serif;
 }
 .your-review h4{
 	font-size:1.2em;
@@ -1109,7 +1109,6 @@ body {
 	font-size:0.8125em;
 	color:#757575;
 	padding-bottom:5px;
-	font-family :verdana, arial, helvetica, helve, sans-serif;
 }
 .your-review label span.red{
 	color:#CD1F25;
@@ -1124,7 +1123,6 @@ body {
 			outline:none;
 			color:#222;
 			font-size:1em;
-			font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
 			-webkit-appearance:none;
 }
 .your-review textarea{
@@ -1134,7 +1132,6 @@ body {
 .your-review input[type="submit"]{
     font-size:1em;
 	padding:10px 15px;
-	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
 	background:#E4292F;
 	color: #FFF;
 	text-decoration: none;
@@ -1192,7 +1189,7 @@ body {
 	padding:3px 0px 9px 0;
 }
 .poll input.radio {
-	float: left;
+	float: right;
 	margin:4px 0 0 0;
 }
 .poll .label {
@@ -1224,7 +1221,7 @@ body {
 	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 .contact-form input[type="text"].textbox{
-  float:left;
+  float:right;
   width:29.6%;
   margin-left:2.5%;
 }

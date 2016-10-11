@@ -375,6 +375,10 @@ th {
   font-family: "FarAfsoon";
   src: url("/fonts/FarAfsoon.eot");
   src: url("/fonts/FarAfsoon.eot?#iefix") format("embedded-opentype"), url("/fonts/FarAfsoon.woff") format("woff"), url("/fonts/FarAfsoon.ttf") format("truetype"); }
+body {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  direction: rtl; }
+
 #flash div {
   padding: 8px 35px 8px 14px;
   text-align: center;
