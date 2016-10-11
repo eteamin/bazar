@@ -20,7 +20,9 @@ public_css: !watch
     input: !template ${sass}/aminbazar.sass
     output: !template ${temp}/aminbazar.css
   inputs:
-    - !template ${contrib}/lightslider/lightslider.css
+    - !template ${public}/css/easy-responsive-tabs.css
+    - !template ${public}/css/etalage.css
+    - !template ${public}/css/style.css
     - !eval public_css.sass.output
 
   output: !template ${public}/css/public.css
@@ -61,19 +63,12 @@ public_js: !watch
   inputs:
 
     - !template ${public_contrib}/jquery-1.11.2.js
-    - !template ${public_contrib}/modernizr-2.7.1.js
-    - !template ${contrib}/lightslider/lightslider.js
-    - !template ${contrib}/prayertimes.js
-    - !template ${contrib}/joop-1.3.min.js
-    - !template ${contrib}/snap.svg-min.js
-    - !template ${contrib}/news-ticker/jquery.ticker.js
-
-
-    - !template ${js}/head.js
-    - !template ${js}/image.js
-    - !template ${js}/logo.js
-    - !template ${js}/logotype.js
-    - !template ${js}/tail.js
+    - !template ${public_contrib}/easing.js
+    - !template ${public_contrib}/easyResponsiveTabs.js
+    - !template ${public_contrib}/jquery.etalage.min.js
+    - !template ${public_contrib}/jquery.openCarousel.js
+    - !template ${public_contrib}/move-top.js
+    - !template ${public_contrib}/star-rating.js
 
   output: !template ${out_js}/public.js
   minified_output: !template ${out_js}/public.min.js
