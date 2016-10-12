@@ -6,6 +6,7 @@
 ${self.page_title()}
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
   <link rel="stylesheet" type="text/css" media="screen" href="/css/public${min}.css"/>
     <script src="/js/public${min}.js"></script>
 </head>
@@ -14,7 +15,7 @@ ${self.page_title()}
   	  		<div class="wrap">
 				<div class="header_top">
 					<div class="logo">
-						<a href="${tg.url('/')}"><img src="img/logo.png" alt="" /></a>
+						<h1><a href="" style="color: #b94a48;">AminBazaar</a></h1>
 					</div>
 ## 						<div class="header_top_right">
 ## 							  <div class="search_box">
@@ -27,52 +28,91 @@ ${self.page_title()}
 ## 					</div>
 			     <div class="clear"></div>
   		    </div>
-  		    <div class="navigation">
-  		    	<a class="toggleMenu" href="#">Menu</a>
-					<ul class="nav">
-						<li>
-							<a href="index.html">خانه</a>
-						</li>
-						<li  class="test">
-							<a href="#">کالا</a>
-							<ul>
-								<li>
-									<a href="#">آشپزی</a>
-									<ul>
-										<li><a href="#">پنیر</a></li>
-										<li><a href="#">Pressure Cookers</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Storage</a>
-									<ul>
-										<li><a href="#">Bottles & Sippers</a></li>
-										<li><a href="#">Containers & Jars</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Cutlery & Tableware</a>
-									<ul>
-										<li><a href="#">Cutlery</a></li>
-										<li><a href="#">Condiment Sets</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Bar Accessories</a>
-									<ul>
-										<li><a href="#">Bottle Openers</a></li>
-										<li><a href="#">Flasks</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="contact.html">ارتباط با ما</a>
-						</li>
-					</ul>
-					 <span class="left-ribbon"> </span>
-      				 <span class="right-ribbon"> </span>
-  		    </div>
+            <div class="container">
+              <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">My Store</a>
+                </div>
+
+                <div class="collapse navbar-collapse js-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown mega-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men <span class="caret"></span></a>
+                            <ul class="dropdown-menu mega-dropdown-menu">
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">Men Collection</li>
+                                        <div id="menCollection" class="carousel slide" data-ride="carousel">
+                                          <div class="carousel-inner">
+                                            <div class="item active">
+                                                <a href="#"><img src="" class="img-responsive" alt="product 1"></a>
+                                                <h4><small>Summer dress floral prints</small></h4>
+                                                <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                            </div><!-- End Item -->
+                                            <div class="item">
+                                                <a href="#"><img src="" class="img-responsive" alt="product 2"></a>
+                                                <h4><small>Gold sandals with shiny touch</small></h4>
+                                                <button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                            </div><!-- End Item -->
+                                            <div class="item">
+                                                <a href="#"><img src="" class="img-responsive" alt="product 3"></a>
+                                                <h4><small>Denin jacket stamped</small></h4>
+                                                <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                            </div><!-- End Item -->
+                                          </div><!-- End Carousel Inner -->
+                                          <!-- Controls -->
+                                          <a class="left carousel-control" href="#menCollection" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                          </a>
+                                          <a class="right carousel-control" href="#menCollection" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                          </a>
+                                        </div><!-- /.carousel -->
+                                        <li class="divider"></li>
+                                        <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">Features</li>
+                                        <li><a href="#">Auto Carousel</a></li>
+                                        <li><a href="#">Carousel Control</a></li>
+                                        <li><a href="#">Left & Right Navigation</a></li>
+                                        <li><a href="#">Four Columns Grid</a></li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Fonts</li>
+                                        <li><a href="#">Glyphicon</a></li>
+                                        <li><a href="#">Google Fonts</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Store locator</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My account <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div><!-- /.nav-collapse -->
+              </nav>
+            </div>
+
   		     <div class="header_bottom">
 			   <div class="slider-text">
 			   	<h2>Lorem Ipsum Placerat <br/>Elementum Quistue Tunulla Maris</h2>
@@ -85,7 +125,7 @@ ${self.page_title()}
 	  	     <div class="clear"></div>
 	      </div>
    		</div>
-   </div>
+
    <!------------End Header ------------>
   <div class="main">
       <div class="content">
@@ -93,20 +133,9 @@ ${self.page_title()}
     	        	<div class="wrap">
 		          	   <h3>آخرین محصولات</h3>
 		          	</div>
-		          	<div class="line"> </div>
-		          	<div class="wrap">
-		          	 <div class="ocarousel_slider">
-	      				<div class="ocarousel example_photos" data-ocarousel-perscroll="3">
-			                <div class="ocarousel_window">
-			                   <a href="#" title="img1"> <img src="img/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a>
-			                </div>
-			               <span>
-			                <a href="#" data-ocarousel-link="left" style="float: left;" class="prev"> </a>
-			                <a href="#" data-ocarousel-link="right" style="float: right;" class="next"> </a>
-			               </span>
-					   </div>
 				     </div>
 				   </div>
+    	       </div>
     	       </div>
     	  <div class="content_bottom">
     	    <div class="wrap">
@@ -147,8 +176,6 @@ ${self.page_title()}
 		      <div class="clear"></div>
 		   </div>
          </div>
-      </div>
-    </div>
    <div class="footer">
    	  <div class="wrap">
 		   <div class="footer-nav">
@@ -166,9 +193,10 @@ ${self.page_title()}
 		});
 	</script>
     <a href="#" id="toTop"> </a>
-     <script type="text/javascript" src="/js/navigation.js"></script>
+    <script type="text/javascript" src="/js/navigation.js"></script>
+
 </body>
-</html>
+## ${self.page_scripts()}
 <%def name="head()"></%def>
 <%def name="page_title()" >
   <title>${page.header}</title>
@@ -186,4 +214,17 @@ ${self.page_title()}
       </div>
   % endif
 </%def>
-
+<script>
+    $(document).ready(function(){
+        $(".dropdown").hover(
+            function() {
+                $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+                $(this).toggleClass('open');
+            },
+            function() {
+                $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+                $(this).toggleClass('open');
+            }
+        );
+    });
+</script>

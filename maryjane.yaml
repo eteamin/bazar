@@ -22,6 +22,7 @@ public_css: !watch
   inputs:
     - !template ${public}/css/easy-responsive-tabs.css
     - !template ${public}/css/etalage.css
+    - !template ${public}/css/bootstrap.min.css
     - !template ${public}/css/style.css
     - !eval public_css.sass.output
 
