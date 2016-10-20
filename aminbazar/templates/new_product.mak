@@ -1,11 +1,12 @@
 <%inherit file="local:templates.master" />
+<%def name="title()">Login Form</%def>
+
 <div class="centralized">
-  <div class="col-md-8 col-md-offset-1">
     <form action="${tg.url('/products/submit_product')}"
           method="post" accept-charset="UTF-8" class="login" enctype="multipart/form-data">
 
       <div class="form-group">
-        <label class="field_labels">نام محصول:</label>
+        <label class="col-sm-12 control-label">نام محصول:</label>
           <input class="form-control" type="text" name="title" required/>
       </div>
 
@@ -38,16 +39,15 @@
                 </select>
         </div>
       <div class="form-group">
-        <label class="field_labels">تصاویر کالا:</label>
+        <label class="field_labels">تصویر کالا:</label>
           <input class="form-control" type="file" name="image" required/>
       </div>
 
       <div class="form-group">
-        <div>
-          <button type="submit" class="filed_labels">ثبت</button>
+        <div class="col-sm-10 col-sm-offset-2">
+          <input type="submit" value="ثبت"  class="mybutton">
         </div>
       </div>
     </form>
 
-  </div>
 </div>

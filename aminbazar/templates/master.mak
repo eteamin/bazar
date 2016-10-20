@@ -7,8 +7,11 @@ ${self.page_title()}
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="/css/public${min}.css"/>
-    <script src="/js/public${min}.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/css/public${min}.css"/>
+    <link rel="stylesheet" type="text/css" href="/contrib/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/contrib/slick-theme.css"/>
+<script src="/js/public${min}.js"></script>
+    <script src="/contrib/slick.min.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -133,6 +136,18 @@ ${self.page_title()}
     	        	<div class="wrap">
 		          	   <h3>آخرین محصولات</h3>
 		          	</div>
+		          	<div class="line"> </div>
+
+                        <div class="slicker">
+                          <div class="item"><h1>1</h1></div>
+                          <div class="item"><h1>2</h1></div>
+                          <div class="item"><h1>3</h1></div>
+                          <div class="item"><h1>4</h1></div>
+                          <div class="item"><h1>5</h1></div>
+
+                        </div>
+
+
 				     </div>
 				   </div>
     	       </div>
@@ -193,7 +208,6 @@ ${self.page_title()}
 		});
 	</script>
     <a href="#" id="toTop"> </a>
-    <script type="text/javascript" src="/js/navigation.js"></script>
 
 </body>
 ## ${self.page_scripts()}
@@ -226,5 +240,12 @@ ${self.page_title()}
                 $(this).toggleClass('open');
             }
         );
+            $('.slicker').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 2000
+});
+
     });
 </script>

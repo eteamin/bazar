@@ -31,7 +31,7 @@ class RootController(BaseController):
             if not request.path.startswith('/incompatible'):
                 redirect('/incompatible')
 
-    @expose('aminbazar.templates.web.index')
+    @expose('aminbazar.templates.index')
     def index(self):
         """Handle the front-page."""
         return dict(

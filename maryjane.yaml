@@ -63,13 +63,14 @@ public_js: !watch
 
   inputs:
 
-    - !template ${public_contrib}/jquery-1.11.2.js
+    - !template ${public_contrib}/jquery-1.9.1.js
     - !template ${public_contrib}/easing.js
     - !template ${public_contrib}/easyResponsiveTabs.js
     - !template ${public_contrib}/jquery.etalage.min.js
-    - !template ${public_contrib}/jquery.openCarousel.js
     - !template ${public_contrib}/move-top.js
+    - !template ${public_contrib}/form_validation.js
     - !template ${public_contrib}/star-rating.js
+
 
   output: !template ${out_js}/public.js
   minified_output: !template ${out_js}/public.min.js

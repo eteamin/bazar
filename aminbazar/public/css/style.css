@@ -235,74 +235,20 @@ body {
   background:#EEE;
   height:1px;
 }
-.ocarousel_window {
-	width: 100%;
+
+
+.customNavigation{
+  text-align: center;
 }
-.ocarousel {
-    display: none;
-    padding-top:35px;
-    position:relative;
+.customNavigation a{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.ocarousel span{
-	position:absolute;
-	right:0;
-	top:-48px;
-	width:70px;
-}
-.ocarousel span a.prev,.ocarousel span a.next{
-	width:30px;
-	height:30px;
-	text-align:center;
-	background:#e44f2b url("../images/arrows.png") no-repeat;
-	border-radius:2em;
-	-webkit-border-radius:2em;
-	-moz-border-radius:2em;
-	-o-border-radius:2em;
-}
-.ocarousel span a.prev{
-	background-position:0px 2px;
-}
-.ocarousel span a.next{
-	background-position:-40px 2px;
-}
-.ocarousel span a.prev:hover,.ocarousel span a.next:hover{
-	background-color:#444;
-}
-.ocarousel_window {
-        overflow: hidden;
-        white-space: nowrap;
-        /* default size */
-        width:100%;
-}
-.ocarousel_window_slides {
-            position: relative;
-            margin: 0 auto;
-            overflow: hidden;
-            width: 50000px;
-            white-space: nowrap;
- }
-.ocarousel_window_slides * {
-            float: right;
-            white-space: normal;
-}
-.ocarousel_window_slides a{
-	border-left:1px solid #F2F2F2;
-	padding:0 35px;
-}
-.ocarousel_window_slides a p{
-  display:block;
-  font-size:14px;
-  color:#a5a5a5;
-  float:none;
-  text-align:center;	
-}
-.ocarousel_window_slides a:hover p{
- color:#e44f2b;
- text-decoration:underline;
-}
-.ocarousel_indicators {
-    width: 100%;
-}
+
 .content_bottom{
 	padding-top:2em;
 }
@@ -322,9 +268,10 @@ body {
 	font-size:1.1em;
 	color:#FFF;
 	padding:10px;
+	margin-left: 5px;
 	padding-left:25px;
 	background:#e44f2b;
-	position:relative;
+	/*position:relative;*/
 	margin-bottom:5px;
 }
 .categories h3:after,.buters-guide h3:after {
@@ -1499,4 +1446,9 @@ body {
   text-shadow: none;
   color: #333;
   border: 1px solid #ddd;
+}
+
+.centralized {
+  position: relative;
+  left: -30%;
 }

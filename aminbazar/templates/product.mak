@@ -1,4 +1,4 @@
-<%inherit file="local:templates.scaffold" />
+<%inherit file="local:templates.master" />
 <%
     address = "products/remove_product/"
 %>
