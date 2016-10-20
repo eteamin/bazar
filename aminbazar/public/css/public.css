@@ -411,6 +411,7 @@ body {
 .slider-text{
 	float:right;
 	width:50%;
+	margin-right: 12px;
 }
 .slider-text h2{
 	color:#e44f2b;
@@ -557,12 +558,14 @@ body {
 	margin-top:2em;
 }
 .buters-guide p{
+	margin-right: 5px;
 	font-size:14px;
 	color:#969696;
 	line-height:1.4em;
 	padding:8px 0;
 }
 .buters-guide p span{
+	margin-right: 5px;
 	color:#e44f2b;
 	font-size:16px;
 }
@@ -2100,3 +2103,27 @@ body {
   color: #3a87ad;
   background-color: #d9edf7;
   border-color: #bce8f1; }
+
+.product-content-area {
+  padding-top: 8px;
+  border: 1px solid #fdfff4; }
+  .product-content-area img {
+    height: 450px;
+    width: 100%;
+    border-radius: 5px; }
+
+.product-grid-view {
+  display: inline-flex;
+  font-size: 16px;
+  width: 100%;
+  background-color: ghostwhite; }
+  .product-grid-view div {
+    padding-left: 100px; }
+    .product-grid-view div div {
+      padding-top: 10px;
+      border-radius: 5px;
+      background-color: rgba(112, 208, 80, 0.24); }
+      .product-grid-view div div p {
+        margin-top: 3px;
+        margin-right: 5px;
+        padding-bottom: 14px; }

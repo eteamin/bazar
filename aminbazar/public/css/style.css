@@ -169,6 +169,7 @@ body {
 .slider-text{
 	float:right;
 	width:50%;
+	margin-right: 12px;
 }
 .slider-text h2{
 	color:#e44f2b;
@@ -315,6 +316,7 @@ body {
 	margin-top:2em;
 }
 .buters-guide p{
+	margin-right: 5px;
 	font-size:14px;
 	color:#969696;
 	line-height:1.4em;
@@ -458,6 +460,7 @@ body {
 }
 .product-articles{
 	padding:20px 0;
+	margin-right: 5px;
 }
 .product-articles p{
 	font-size:15px;

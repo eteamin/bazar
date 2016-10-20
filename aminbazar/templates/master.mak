@@ -40,13 +40,13 @@ ${self.page_title()}
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">My Store</a>
+                    <a class="navbar-brand" href="#">امین بازار</a>
                 </div>
 
                 <div class="collapse navbar-collapse js-navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown mega-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">دسته بندی ها <span class="caret"></span></a>
                             <ul class="dropdown-menu mega-dropdown-menu">
                                 <li class="col-sm-3">
                                     <ul>
@@ -98,17 +98,18 @@ ${self.page_title()}
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#">Store locator</a></li>
+                        <li><a href="#">ارتباط با ما</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My account <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">حساب کاربری <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                         % if 'user_name' not in session:
+                         <li><a href="#">ورود</a></li>
+                        <li><a href="#">ثبت نام</a></li>
+                         %else:
+                             <li><a href="#">محصولات من</a></li>
+                         %endif
                       </ul>
                     </li>
                   </ul>
@@ -118,12 +119,12 @@ ${self.page_title()}
 
   		     <div class="header_bottom">
 			   <div class="slider-text">
-			   	<h2>Lorem Ipsum Placerat <br/>Elementum Quistue Tunulla Maris</h2>
-			   	<p>Vivamus vitae augue at quam frigilla tristique sit amet<br/> acin ante sikumpre tisdin.</p>
-			   	<a href="#">Sitamet Tortorions</a>
+			   	<h2>امین بازار</h2>
+			   	<p>شعار امین بازار</p>
+			   	<a href="#">درباره ی ما</a>
 	  	      </div>
 	  	      <div class="slider-img">
-	  	      	<img src="img/slider-img.png" alt="" />
+	  	      	<img src="/images/slider-img.png" alt="" />
 	  	      </div>
 	  	     <div class="clear"></div>
 	      </div>
@@ -137,18 +138,16 @@ ${self.page_title()}
 		          	   <h3>آخرین محصولات</h3>
 		          	</div>
 		          	<div class="line"> </div>
-
                         <div class="slicker">
-                          <div class="item"><h1>1</h1></div>
-                          <div class="item"><h1>2</h1></div>
-                          <div class="item"><h1>3</h1></div>
-                          <div class="item"><h1>4</h1></div>
-                          <div class="item"><h1>5</h1></div>
-
+                          <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
+                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
+                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
+                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
+                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
+                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
+                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
                         </div>
-
-
-				     </div>
+                </div>
 				   </div>
     	       </div>
     	       </div>
@@ -157,27 +156,19 @@ ${self.page_title()}
     	    	<div class="content-bottom-left">
     	    		<div class="categories">
 						   <ul>
-						  	   <h3>جستجو</h3>
-							      <li><a href="#">Appliances</a></li>
+						  	   <h3>دسته بندی ها</h3>
+							      <li><a href="#">ورزشی</a></li>
 						  	 </ul>
 						</div>
 						<div class="buters-guide">
-						<h3>Buyers Guide</h3>
-						<p><span>We want you to be happy with your purchase.</span></p>
-						<p>So we're committed to giving you all the tools to make the right decision with minimum fuss. </p>
+						<h3>راهنمای سایت</h3>
+						<p><span>راهنمای امین بازار</span></p>
+						<p>توضیحات بیشتر </p>
 					  </div>
 					  <div class="add-banner">
 					  	<img src="img/camera.png" alt="" />
 					  	<div class="banner-desc">
 					  		<h4>Electronics</h4>
-					  	    <a href="#">More Info</a>
-					  	</div>
-					  	<div class="clear"></div>
-					  </div>
-					    <div class="add-banner add-banner2">
-					  	<img src="img/computer.png" alt="" />
-					  	<div class="banner-desc">
-					  		<h4>Computers</h4>
 					  	    <a href="#">More Info</a>
 					  	</div>
 					  	<div class="clear"></div>
@@ -241,8 +232,8 @@ ${self.page_title()}
             }
         );
             $('.slicker').slick({
-              slidesToShow: 3,
-              slidesToScroll: 1,
+              slidesToShow: 10,
+              slidesToScroll: 10,
               autoplay: true,
               autoplaySpeed: 2000
 });
