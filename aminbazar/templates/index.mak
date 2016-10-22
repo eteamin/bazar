@@ -7,7 +7,7 @@
           <a href="${tg.url('/products/details')}/${p.id}"><img src="${p.image.url}" alt="" /></a>
           <div class="price-details">
            <div class="price-number">
-                <p><span class="rupees">${p.price} تومان</span></p>
+                <p><span class="rupees">${p.price}</span> تومان</p>
             </div>
                     <div class="add-cart">
                         <h4><a href="${tg.url('/products/details')}/${p.id}">جزئیات</a></h4>
@@ -29,4 +29,3 @@
   </li>
   </ul>
 </div>
-

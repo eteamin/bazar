@@ -416,9 +416,9 @@ body {
 .price-details{
 	border-top:1px solid #eee;
 }
-.price-details p span.rupees{
-	font-size:22px;
-	color:#23272a;
+.rupees{
+	font-size:16px;
+	color:#4caf50
 }
 .add-cart{
 	display: inline-block;
@@ -1460,14 +1460,27 @@ body {
 }
 
 .product-grid li {
+	display: flex;
 	margin-bottom: 15px;
 	margin-right: 5px;
 	font-size: 16px;
 }
-.product-label {
-	border-radius: 3px;
-	margin-left: 15%;
 
-	padding: 5px;
+.product-label {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 35px;
+	padding-right: 5px;
+	width: 150px;
+	border-radius: 3px;
 	background-color: #dedede;
+}
+
+.product-info {
+	width: 50%;
+	border-radius: 3px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	background-color: rgba(228, 79, 43, 0.05);
 }
