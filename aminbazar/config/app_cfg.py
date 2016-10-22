@@ -42,7 +42,7 @@ base_config.DBSession = aminbazar.model.DBSession
 # Configure the authentication backend
 
 # YOU MUST CHANGE THIS VALUE IN PRODUCTION TO SECURE YOUR APP 
-base_config.sa_auth.cookie_secret = "6278f1d7-1412-4144-bc6b-b8c5e248a73c"
+base_config.sa_auth.cookie_secret = "62dfbc57-1264-6891-ys4x-axz8xvf27h8l"
 
 base_config.auth_backend = 'sqlalchemy'
 
