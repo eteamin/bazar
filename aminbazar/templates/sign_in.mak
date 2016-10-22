@@ -1,6 +1,6 @@
 <%inherit file="local:templates.master"/>
 <%def name="title()">Login Form</%def>
-
+-
 <div class="centralized">
     <form action="${tg.url('/account/login')}"
           method="post" accept-charset="UTF-8" class="login">

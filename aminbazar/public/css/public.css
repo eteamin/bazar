@@ -502,6 +502,7 @@ body {
 } 
 .content-bottom-right{
 	float:right;
+	margin-bottom: 5px;
 	width:75.8%;
 	padding-left:2%;
 	border-left:1px solid #D7D7D7;
@@ -565,7 +566,6 @@ body {
 	padding:8px 0;
 }
 .buters-guide p span{
-	margin-right: 5px;
 	color:#e44f2b;
 	font-size:16px;
 }
@@ -701,8 +701,12 @@ body {
 	  text-shadow: 0px 0px 1px #000;
 	  background:#292929;
 }
+.article {
+	margin-right: 5px;
+}
 .product-articles{
 	padding:20px 0;
+	margin-right: 5px;
 }
 .product-articles p{
 	font-size:15px;
@@ -1694,8 +1698,20 @@ body {
 }
 
 .centralized {
-  position: relative;
-  left: -30%;
+	margin-right: 33%;
+}
+
+.product-grid li {
+	margin-bottom: 5px;
+	margin-right: 5px;
+	font-size: 16px;
+}
+.product-label {
+	border-radius: 3px;
+	margin-left: 15%;
+
+	padding: 5px;
+	background-color: #dedede;
 }/* ==========================================================================
    Normalize.scss settings
    ========================================================================== */

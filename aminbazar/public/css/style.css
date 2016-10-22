@@ -260,6 +260,7 @@ body {
 } 
 .content-bottom-right{
 	float:right;
+	margin-bottom: 5px;
 	width:75.8%;
 	padding-left:2%;
 	border-left:1px solid #D7D7D7;
@@ -457,6 +458,9 @@ body {
 .add-cart h4 a:hover{
 	  text-shadow: 0px 0px 1px #000;
 	  background:#292929;
+}
+.article {
+	margin-right: 5px;
 }
 .product-articles{
 	padding:20px 0;
@@ -1452,6 +1456,18 @@ body {
 }
 
 .centralized {
-  position: relative;
-  left: -30%;
+	margin-right: 33%;
+}
+
+.product-grid li {
+	margin-bottom: 15px;
+	margin-right: 5px;
+	font-size: 16px;
+}
+.product-label {
+	border-radius: 3px;
+	margin-left: 15%;
+
+	padding: 5px;
+	background-color: #dedede;
 }

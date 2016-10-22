@@ -414,20 +414,20 @@ body {
     width: 100%;
     border-radius: 5px; }
 
-.product-grid-view {
-  display: inline-flex;
-  font-size: 16px;
-  width: 100%;
-  background-color: ghostwhite; }
-  .product-grid-view div {
-    padding-left: 100px; }
-    .product-grid-view div div {
-      padding-top: 10px;
-      border-radius: 5px;
-      background-color: rgba(112, 208, 80, 0.24); }
-      .product-grid-view div div p {
-        margin-top: 3px;
-        margin-right: 5px;
-        padding-bottom: 14px; }
+/*.product-grid-view {*/
+  /*display: inline-flex;*/
+  /*font-size: 16px;*/
+  /*width: 100%;*/
+  /*background-color: ghostwhite; }*/
+  /*.product-grid-view div {*/
+    /*padding-left: 100px; }*/
+    /*.product-grid-view div div {*/
+      /*padding-top: 10px;*/
+      /*border-radius: 5px;*/
+      /*background-color: rgba(112, 208, 80, 0.24); }*/
+      /*.product-grid-view div div p {*/
+        /*margin-top: 3px;*/
+        /*margin-right: 5px;*/
+        /*padding-bottom: 14px; }*/
 
 /*# sourceMappingURL=aminbazar.css.map */

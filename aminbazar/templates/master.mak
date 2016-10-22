@@ -117,37 +117,14 @@ ${self.page_title()}
               </nav>
             </div>
 
-  		     <div class="header_bottom">
-			   <div class="slider-text">
-			   	<h2>امین بازار</h2>
-			   	<p>شعار امین بازار</p>
-			   	<a href="#">درباره ی ما</a>
-	  	      </div>
-	  	      <div class="slider-img">
-	  	      	<img src="/images/slider-img.png" alt="" />
-	  	      </div>
-	  	     <div class="clear"></div>
-	      </div>
+
+         <div class="clear"></div>
    		</div>
 
    <!------------End Header ------------>
   <div class="main">
       <div class="content">
-    	        <div class="content_top">
-    	        	<div class="wrap">
-		          	   <h3>آخرین محصولات</h3>
-		          	</div>
-		          	<div class="line"> </div>
-                        <div class="slicker">
-                          <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
-                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
-                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
-                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
-                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
-                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
-                            <div class="item"><a href="#" title="img1"> <img src="/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a></div>
-                        </div>
-                </div>
+
 				   </div>
     	       </div>
     	       </div>
