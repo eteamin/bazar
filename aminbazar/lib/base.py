@@ -37,6 +37,6 @@ class BaseController(TGController):
 
         request.client_info = user_agents.parse(request.user_agent)
 
-        tmpl_context.project_name = "twa"
+        tmpl_context.project_name = "aminbazar"
 
         return TGController.__call__(self, environ, context)

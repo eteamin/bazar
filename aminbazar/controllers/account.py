@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Main Controller"""
+"""Account Controller"""
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm.exc import NoResultFound
 from tg import expose, lurl, session, flash, lurl, abort, config as tg_config
@@ -9,7 +9,9 @@ import transaction
 from aminbazar.model import DBSession, Account
 from aminbazar.lib.base import BaseController
 from . import FakePage
-__all__ = ['RootController']
+
+
+__all__ = ['AccountController']
 
 
 class AccountController(BaseController):
@@ -33,7 +35,7 @@ class AccountController(BaseController):
                 account = DBSession.query(Account).filter(Account.user_name == user_name).one()
             except NoResultFound:
                 flash(u'نام کاربری و یا رمز عبور اشتباه است', 'warning')
-                return HTTPFound(location=lurl('/account/sign_in'))
+                return HTTPFound(location=lurl('/accounts/sign_in'))
             if account.validate_password(password):
                 session['account_id'] = account.id
                 session['user_name'] = account.user_name
@@ -41,7 +43,7 @@ class AccountController(BaseController):
                 return HTTPFound(location=lurl('/'))
             else:
                 flash(u'نام کاربری و یا رمز عبور اشتباه است', 'warning')
-                return HTTPFound(location=lurl('/account/sign_in'))
+                return HTTPFound(location=lurl('/accounts/sign_in'))
         except KeyError:
             abort(400)
 
@@ -84,8 +86,8 @@ class AccountController(BaseController):
             DBSession.add(account)
             transaction.commit()
             flash(u'ثبت نام با موفقیت انجام شد')
-            return HTTPFound(location=lurl('/account/sign_in'))
+            return HTTPFound(location=lurl('/accounts/sign_in'))
         except IntegrityError:
             transaction.abort()
             flash(u'این نام کاربری قبلا ثبت شده است', 'warning')
-            return HTTPFound(location=lurl('/account/sign_up'))
+            return HTTPFound(location=lurl('/accounts/sign_up'))

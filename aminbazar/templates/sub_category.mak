@@ -1,5 +1,5 @@
 <%inherit file="local:templates.master" />
-<h3>آخرین محصولات</h3>
+<h3>محصولات دسته بندی ${title}</h3>
 <div class="section group">
     % for p in products:
       <div class="grid_1_of_4 images_1_of_4">
@@ -16,16 +16,10 @@
         </div>
     </div>
     % endfor
+
 </div>
-<div class="product-articles">
-  <h3>آخرین اخبار</h3>
-  <ul>
-    <li>
-  <div class="article">
-    <p><span>عنوان</span></p>
-    <p>شرح خبر</p>
-    <p><a href="#">+ متن کامل</a></p>
-  </div>
-  </li>
-  </ul>
-</div>
+    <p class="pagelist">
+        <a class="prevPage" href="?page=${tmpl_context.paginators.products.previous_page}">&lt;&lt;&lt;</a>
+        ${tmpl_context.paginators.products.pager(format='~3~', page_param='page', show_if_single_page=False)}
+        <a class="nextPage" href="?page=${tmpl_context.paginators.products.next_page}">&gt;&gt;&gt;</a>
+    </p>

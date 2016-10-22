@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """Main Controller"""
+from aminbazar.controllers import FakePage
 from tg import expose, flash, lurl, request, redirect, tmpl_context, abort, config as tg_config
-from tg.render import render
+from tg.decorators import paginate
 from tg.i18n import ugettext as _
 from tg.exceptions import HTTPFound
 from aminbazar import model
-from aminbazar.model import DBSession
+from aminbazar.model import DBSession, Product
 from aminbazar.lib.base import BaseController
 from sqlalchemy import or_
 from .admin import LocalAdminController
@@ -21,7 +22,7 @@ class RootController(BaseController):
 
     area52 = LocalAdminController(DBSession)
     error = ErrorController()
-    account = AccountController()
+    accounts = AccountController()
     products = ProductsController()
 
     def _before(self, *args, **kw):
@@ -35,10 +36,32 @@ class RootController(BaseController):
     def index(self):
         """Handle the front-page."""
         return dict(
-            products=model.DBSession.query(model.Product).all(),
+            products=model.DBSession.query(model.Product)[:8],
             page=model.DBSession.query(model.ParentMenu).filter(model.Menu.id == 1).one(),
             banners=model.DBSession.query(model.Banner),
             related_image_links=model.DBSession.query(model.RelatedImageLink).all(),
+        )
+
+    @expose('aminbazar.templates.sub_category')
+    @paginate('products', items_per_page=12)
+    def sub_category(self, sub_id):
+        try:
+            _id = int(sub_id)
+        except ValueError:
+            abort(404)
+        products = DBSession.query(Product).filter(Product.sub_category_id == _id)
+        if not products:
+            abort(404)
+        return dict(
+            page=FakePage(u'محصولات دسته بندی %s' % products[0].sub_category.title),
+            title=products[0].sub_category.title,
+            products=products
+        )
+
+    @expose('aminbazar.templates.custom_page')
+    def contact_us(self):
+        return dict(
+            page=FakePage(u'ارتباط با ما', description=u'این صفحه در حال آماده سازی است')
         )
 
     @expose('aminbazar.templates.incompatible')

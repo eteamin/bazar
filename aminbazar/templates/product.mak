@@ -31,10 +31,21 @@
             <div class="product-info">${product.price}</div>
         </li>
 
-
          % if 'user_name' in session and session['user_name'] == product.account.user_name:
-            <li class="col-sm-1"><p>اعمال تغییرات</p></li>
+         <li>
+            <div class="product-label">اعمال تغییرات</div>
+            <div class="product-info"><a class="delete-product" href="${tg.url('/products/remove_product/')}${product.id}">حذف</a></div>
+         </li>
          % endif
 
     </ul>
 </div>
+
+
+<script>
+    $(document).ready(function() {
+    $(".delete-product").click(function() {
+        return confirm('آیا از حذف اطمینان دارید؟')
+    });
+});
+</script>

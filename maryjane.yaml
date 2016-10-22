@@ -24,6 +24,7 @@ public_css: !watch
     - !template ${public}/css/etalage.css
     - !template ${public}/css/bootstrap.min.css
     - !template ${public}/css/style.css
+    - !template ${public}/css/jquery.navgoco.css
     - !eval public_css.sass.output
 
   output: !template ${public}/css/public.css
@@ -68,8 +69,10 @@ public_js: !watch
     - !template ${public_contrib}/easyResponsiveTabs.js
     - !template ${public_contrib}/jquery.etalage.min.js
     - !template ${public_contrib}/move-top.js
-    - !template ${public_contrib}/form_validation.js
+    - !template ${public_contrib}/aminbazar_scripts.js
     - !template ${public_contrib}/star-rating.js
+    - !template ${public_contrib}/jquery.cookie.js
+    - !template ${public_contrib}/jquery.navgoco.js
 
 
   output: !template ${out_js}/public.js

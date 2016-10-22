@@ -4,7 +4,7 @@
 <script src='/js/form_validation.js'></script>
 
 <div class="centralized">
-    <form onsubmit="return validateForm();" action="${tg.url('/account/register')}"
+    <form onsubmit="return validateForm();" action="${tg.url('/accounts/register')}"
           method="post" accept-charset="UTF-8">
 
       <div class="form-group">

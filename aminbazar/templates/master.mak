@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
   <%
     min = '' if h.is_debug() else '.min'
+    logged_in = 'user_name' in session
   %>
 <head>
 ${self.page_title()}
@@ -18,15 +19,6 @@ ${self.page_title()}
                         <div class="logo">
                             <h1><a href="${tg.url('/')}" style="color: #b94a48;">AminBazaar</a></h1>
                         </div>
-    ## 						<div class="header_top_right">
-    ## 							  <div class="search_box">
-    ## 							  	<span>Search</span>
-    ## 					     		<form>
-    ## 					     			<input type="text" value=""><input type="submit" value="">
-    ## 					     		</form>
-    ## 					     		<div class="clear"></div>
-    ## 					     	</div>
-    ## 					</div>
                      <div class="clear"></div>
                 </div>
                 <div class="container">
@@ -43,73 +35,27 @@ ${self.page_title()}
 
                     <div class="collapse navbar-collapse js-navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="dropdown mega-dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">دسته بندی ها <span class="caret"></span></a>
-                                <ul class="dropdown-menu mega-dropdown-menu">
-                                    <li class="col-sm-3">
-                                        <ul>
-                                            <li class="dropdown-header">Men Collection</li>
-                                            <div id="menCollection" class="carousel slide" data-ride="carousel">
-                                              <div class="carousel-inner">
-                                                <div class="item active">
-                                                    <a href="#"><img src="" class="img-responsive" alt="product 1"></a>
-                                                    <h4><small>Summer dress floral prints</small></h4>
-                                                    <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-                                                </div><!-- End Item -->
-                                                <div class="item">
-                                                    <a href="#"><img src="" class="img-responsive" alt="product 2"></a>
-                                                    <h4><small>Gold sandals with shiny touch</small></h4>
-                                                    <button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-                                                </div><!-- End Item -->
-                                                <div class="item">
-                                                    <a href="#"><img src="" class="img-responsive" alt="product 3"></a>
-                                                    <h4><small>Denin jacket stamped</small></h4>
-                                                    <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-                                                </div><!-- End Item -->
-                                              </div><!-- End Carousel Inner -->
-                                              <!-- Controls -->
-                                              <a class="left carousel-control" href="#menCollection" role="button" data-slide="prev">
-                                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                              </a>
-                                              <a class="right carousel-control" href="#menCollection" role="button" data-slide="next">
-                                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                              </a>
-                                            </div><!-- /.carousel -->
-                                            <li class="divider"></li>
-                                            <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="col-sm-3">
-                                        <ul>
-                                            <li class="dropdown-header">Features</li>
-                                            <li><a href="#">Auto Carousel</a></li>
-                                            <li><a href="#">Carousel Control</a></li>
-                                            <li><a href="#">Left & Right Navigation</a></li>
-                                            <li><a href="#">Four Columns Grid</a></li>
-                                            <li class="divider"></li>
-                                            <li class="dropdown-header">Fonts</li>
-                                            <li><a href="#">Glyphicon</a></li>
-                                            <li><a href="#">Google Fonts</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#">ارتباط با ما</a></li>
+                            <li><a href="${tg.url('/contact')}">ارتباط با ما</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">حساب کاربری <span class="caret"></span></a>
-                          <ul class="dropdown-menu" role="menu">
-                             % if 'user_name' not in session:
-                             <li><a href="${tg.url('/account/sign_in')}">ورود</a></li>
-                            <li><a href="${tg.url('/account/sign_up')}">ثبت نام</a></li>
-                             %else:
-                                 <li><a href="#">محصولات من</a></li>
-                             %endif
-                          </ul>
-                        </li>
+                            % if logged_in:
+                                <li><a href="${tg.url('/products/new')}">افزودن محصول</a></li>
+                            %endif
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">حساب کاربری <span class="caret"></span></a>
+                              <ul class="dropdown-menu" role="menu">
+                                 % if not logged_in:
+                                 <li><a href="${tg.url('/accounts/sign_in')}">ورود</a></li>
+                                <li><a href="${tg.url('/accounts/sign_up')}">ثبت نام</a></li>
+                                 %else:
+                                     <li><a href="${tg.url('/products/my_products/')}${session['account_id']}">محصولات من</a></li>
+                                     <li><a href="${tg.url('/accounts/log_out')}">خروج</a></li>
+                                 %endif
+                              </ul>
+                            </li>
+                            % if logged_in:
+                                <li><a>خوش آمدید ${session['user_name']}</a></li>
+                        % endif
                       </ul>
                     </div><!-- /.nav-collapse -->
                   </nav>
@@ -132,8 +78,18 @@ ${self.page_title()}
                         <div class="categories">
                                <ul>
                                    <h3>دسته بندی ها</h3>
-                                      <li><a href="#">ورزشی</a></li>
                                  </ul>
+                            <ul class="cat-dropdown">
+                                %for c in categories:
+                                <li><a>${c.title}</a>
+                                    <ul>
+                                        %for s in c.sub_category:
+                                            <li><a href="${tg.url('/sub_category/')}${s.id}">${s.title}</a></li>
+                                        %endfor
+                                    </ul>
+                                </li>
+                                %endfor
+                            </ul>
                             </div>
                             <div class="buters-guide">
                             <h3>راهنمای سایت</h3>
@@ -150,8 +106,8 @@ ${self.page_title()}
     ## 					  </div>
                     </div>
                     <div class="content-bottom-right">
-                      ${next.body()}
                       ${self.content_wrapper()}
+                      ${next.body()}
                     </div>
 
                   <div class="clear"></div>
@@ -206,11 +162,17 @@ ${self.page_title()}
                 $(this).toggleClass('open');
             }
         );
-    var converted = Number(parseInt($('.rupees').text())).toLocaleString('en');
-    $('.rupees').each(function() {
-    var text = $(this).text();
-    $(this).text(text.replace(text, converted));
-});
+##     simple hack to add comma to numbers
+    var prices = $('.rupees');
+    for(var i = 0; i < prices.length; i++)
+    {
+        var price = prices.eq(i).text();
+        var dom_price = prices[i];
+        var converted = Number(parseInt(price)).toLocaleString('en');
+        var text = $(dom_price).text();
+        $(dom_price).text(text.replace(text, converted))
+    }
+        $('.cat-dropdown').navgoco();
 
-    });
+});
 </script>

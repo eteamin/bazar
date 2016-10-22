@@ -2,7 +2,7 @@
 <%def name="title()">Login Form</%def>
 -
 <div class="centralized">
-    <form action="${tg.url('/account/login')}"
+    <form action="${tg.url('/accounts/login')}"
           method="post" accept-charset="UTF-8" class="login">
 
       <div class="form-group">

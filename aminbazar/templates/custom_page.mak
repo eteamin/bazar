@@ -2,8 +2,8 @@
 
 
 <article class="page-content">
-  <h2>${page.header}</h2>
-  ${page.content | n}
+  <h1>${page.header}</h1>
+  ${page.description | n}
 </article>
 
 

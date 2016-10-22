@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-from cgi import FieldStorage
 
-import transaction
-from tg import expose, abort, session, flash, lurl, redirect
+from tg import expose, abort, session, flash, lurl
+from tg.decorators import paginate
 from tg.exceptions import HTTPFound
-from tg.i18n import ugettext as _
 from . import FakePage
 from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy.exc import IntegrityError
+
 from aminbazar.model import DBSession, Product, SubCategory
 from aminbazar.lib.base import BaseController
 
@@ -50,6 +49,27 @@ class ProductsController(BaseController):
             sub_categories=DBSession.query(SubCategory).all()
         )
 
+    @expose('aminbazar.templates.my_products')
+    @paginate('products', items_per_page=12)
+    def my_products(self, acc_id):
+        if 'user_name' in session:
+            resp = dict()
+            try:
+                _id = int(acc_id)
+            except ValueError:
+                abort(404)
+            products = DBSession.query(Product).filter(Product.account_id == _id)
+            resp['page'] = FakePage(u'محصولات کاربر %s' % session['user_name'])
+            resp['products'] = products
+            if not products.all():
+                resp['title'] = u'هنوز کالایی ثبت نشده است'
+            else:
+                resp['title'] = products[0].account.user_name
+            return resp
+        else:
+            flash(u'برای مشاهده ی محصولاتی که ثبت کرده اید باید وارد سایت شوید', 'warning')
+            return HTTPFound(location=lurl('/accounts/sign_in'))
+
     @expose()
     def submit_product(self, **kwargs):
         if 'account_id' in session:
@@ -74,7 +94,7 @@ class ProductsController(BaseController):
                 abort(400, detail=u'خطا در ثبت کالا. لطفا دوباره تلاش کنید')
         else:
             flash(u'برای ثبت کالا باید وارد سایت شوید', 'warning')
-            return HTTPFound(location=lurl('/account/sign_in'))
+            return HTTPFound(location=lurl('/accounts/sign_in'))
 
     @expose()
     def remove_product(self, product_id):
