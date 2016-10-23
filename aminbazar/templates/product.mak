@@ -8,19 +8,19 @@
     <ul class="product-grid">
         <li>
             <div class="product-label">عنوان محصول</div>
-            <div class="product-info">${product.price}</div>
+            <div class="product-info">${product.title}</div>
         </li>
         <li>
             <div class="product-label">سال تولید</div>
-            <div class="product-info">${product.price}</div>
+            <div class="product-info">${product.year_of_production}</div>
         </li>
         <li>
             <div class="product-label"> تولید کننده</div>
-            <div class="product-info">${product.price}</div>
+            <div class="product-info">${product.country_of_production}</div>
         </li>
         <li>
             <div class="product-label">تعداد</div>
-            <div class="product-info">${product.price}</div>
+            <div class="product-info">${product.quantity}</div>
         </li>
         <li>
             <div class="product-label">قیمت</div>
@@ -28,7 +28,7 @@
         </li>
         <li>
             <div class="product-label">اطلاعات فروشنده</div>
-            <div class="product-info">${product.price}</div>
+            <div class="product-info">${product.account.bio}</div>
         </li>
 
          % if 'user_name' in session and session['user_name'] == product.account.user_name:
