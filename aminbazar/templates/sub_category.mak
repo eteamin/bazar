@@ -1,5 +1,5 @@
 <%inherit file="local:templates.master" />
-<h3>محصولات دسته بندی ${title}</h3>
+<h3>${title}</h3>
 <div class="section group">
     % for p in products:
       <div class="grid_1_of_4 images_1_of_4">

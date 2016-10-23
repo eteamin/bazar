@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """Main Controller"""
 from aminbazar.controllers import FakePage
+from aminbazar.model.base import SubCategory
+from sqlalchemy.orm.exc import NoResultFound
 from tg import expose, flash, lurl, request, redirect, tmpl_context, abort, config as tg_config
 from tg.decorators import paginate
 from tg.i18n import ugettext as _
@@ -45,18 +47,23 @@ class RootController(BaseController):
     @expose('aminbazar.templates.sub_category')
     @paginate('products', items_per_page=12)
     def sub_category(self, sub_id):
+        resp = dict()
         try:
             _id = int(sub_id)
         except ValueError:
             abort(404)
-        products = DBSession.query(Product).filter(Product.sub_category_id == _id)
-        if not products:
+        try:
+            title = DBSession.query(SubCategory).filter(SubCategory.id == _id).one().title
+        except NoResultFound:
             abort(404)
-        return dict(
-            page=FakePage(u'محصولات دسته بندی %s' % products[0].sub_category.title),
-            title=products[0].sub_category.title,
-            products=products
-        )
+        products = DBSession.query(Product).filter(Product.sub_category_id == _id)
+        resp['products'] = products
+        resp['page'] = FakePage(u'محصولات دسته بندی %s' % title)
+        if not products.all():
+            resp['title'] = u'هنوز محصولی ثبت نشده است'
+        else:
+            resp['title'] = u'محصولات دسته بندی %s' % title
+        return resp
 
     @expose('aminbazar.templates.custom_page')
     def contact_us(self):
