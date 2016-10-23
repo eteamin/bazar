@@ -9902,12 +9902,6 @@ function validateForm() {
         return false;
     }
 }
-
-function confirm_deletion() {
-    alert("wtf");
-    return false;
-
-}
 ﻿/* 
  * ---------------------------------------- *
  * Star Rating                              *

@@ -97,6 +97,10 @@ production.ini~
 development.ini~
 development.ini
 
-# Project Spefici
+# Project Specific
 
 aminbazar/public/uploads/
+aminbazar/public/css/public.css
+aminbazar/public/css/public.min.css
+aminbazar/public/js/public.js
+aminbazar/public/js/public.min.js
